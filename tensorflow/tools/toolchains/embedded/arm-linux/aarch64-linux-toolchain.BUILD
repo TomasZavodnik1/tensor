@@ -3,66 +3,66 @@ package(default_visibility = ["//visibility:public"])
 filegroup(
     name = "gcc",
     srcs = [
-        "bin/aarch64-none-linux-gnu-gcc",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-gcc",
     ],
 )
 
 filegroup(
     name = "ar",
     srcs = [
-        "bin/aarch64-none-linux-gnu-ar",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-ar",
     ],
 )
 
 filegroup(
     name = "ld",
     srcs = [
-        "bin/aarch64-none-linux-gnu-ld",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-ld",
     ],
 )
 
 filegroup(
     name = "nm",
     srcs = [
-        "bin/aarch64-none-linux-gnu-nm",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-nm",
     ],
 )
 
 filegroup(
     name = "objcopy",
     srcs = [
-        "bin/aarch64-none-linux-gnu-objcopy",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-objcopy",
     ],
 )
 
 filegroup(
     name = "objdump",
     srcs = [
-        "bin/aarch64-none-linux-gnu-objdump",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-objdump",
     ],
 )
 
 filegroup(
     name = "strip",
     srcs = [
-        "bin/aarch64-none-linux-gnu-strip",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-strip",
     ],
 )
 
 filegroup(
     name = "as",
     srcs = [
-        "bin/aarch64-none-linux-gnu-as",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/bin/aarch64-none-linux-gnu-as",
     ],
 )
 
 filegroup(
     name = "compiler_pieces",
     srcs = glob([
-        "aarch64-none-linux-gnu/**",
-        "libexec/**",
-        "lib/gcc/aarch64-none-linux-gnu/**",
-        "include/**",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/arch64-unknown-linux-gnu/**",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/libexec/**",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/lib/gcc/arch64-unknown-linux-gnu/**",
+        "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/include/**",
     ]),
 )
 
