@@ -58,12 +58,12 @@ filegroup(
 
 filegroup(
     name = "compiler_pieces",
-    srcs = glob([
+    srcs = [
         "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/arch64-unknown-linux-gnu/**",
         "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/libexec/**",
         "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/lib/gcc/arch64-unknown-linux-gnu/**",
         "/nix/store/z926q96pcanisw6jm80jbiy515bk6gi2-aarch64-unknown-linux-gnu-gcc-13.2.0/include/**",
-    ]),
+    ],
 )
 
 filegroup(
