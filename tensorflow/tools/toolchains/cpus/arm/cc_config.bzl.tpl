@@ -450,13 +450,13 @@ def _impl(ctx):
                             flags = [
                                 "-std=c++11",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/9.2.1/",
+                                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/include/c++/13.2.0/",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include",
+                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include-fixed",
+                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include-fixed",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
+                                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/libc/usr/include/",
                                 "-isystem",
                                 "%{PYTHON_INCLUDE_PATH}%",
                                 "-isystem",
@@ -687,10 +687,10 @@ def _impl(ctx):
             ]
     elif (ctx.attr.cpu == "aarch64"):
         cxx_builtin_include_directories = [
-                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/9.2.1/",
-                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include",
-                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include-fixed",
-                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
+                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/include/c++/13.2.0/",
+                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include",
+                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include-fixed",
+                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/libc/usr/include/",
                 "/usr/include",
                 "/tmp/openblas_install/include/",
             ]
