@@ -450,7 +450,7 @@ def _impl(ctx):
                             flags = [
                                 "-std=c++11",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/include/c++/13.2.0/",
+                                "%{AARCH64_COMPILER_PATH}%/include/c++/13.2.0/",
                                 "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include",
                                 "-isystem",
@@ -687,7 +687,7 @@ def _impl(ctx):
             ]
     elif (ctx.attr.cpu == "aarch64"):
         cxx_builtin_include_directories = [
-                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/include/c++/13.2.0/",
+                "%{AARCH64_COMPILER_PATH}%/include/c++/13.2.0/",
                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include",
                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include-fixed",
                 "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/libc/usr/include/",
