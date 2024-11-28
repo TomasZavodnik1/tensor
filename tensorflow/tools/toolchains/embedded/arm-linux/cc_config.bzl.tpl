@@ -495,44 +495,44 @@ def _impl(ctx):
         tool_paths = [
             tool_path(
                 name = "ar",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-ar",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-ar",
             ),
             tool_path(name = "compat-ld", path = "/bin/false"),
             tool_path(
                 name = "cpp",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-cpp",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-cpp",
             ),
             tool_path(
                 name = "dwp",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-dwp",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-dwp",
             ),
             tool_path(
                 name = "gcc",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-gcc",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-gcc",
             ),
             tool_path(
                 name = "gcov",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-gcov",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-gcov",
             ),
             tool_path(
                 name = "ld",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-ld",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-ld",
             ),
             tool_path(
                 name = "nm",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-nm",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-nm",
             ),
             tool_path(
                 name = "objcopy",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-objcopy",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-objcopy",
             ),
             tool_path(
                 name = "objdump",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-objdump",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-objdump",
             ),
             tool_path(
                 name = "strip",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-strip",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-strip",
             ),
         ]
     elif (ctx.attr.cpu == "armhf"):
