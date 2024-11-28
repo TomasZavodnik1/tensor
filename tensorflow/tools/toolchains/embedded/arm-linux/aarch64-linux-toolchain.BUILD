@@ -58,12 +58,12 @@ filegroup(
 
 filegroup(
     name = "compiler_pieces",
-    srcs = [
+    srcs = glob([[
         "arch64-unknown-linux-gnu/**",
         "libexec/**",
         "lib/gcc/arch64-unknown-linux-gnu/**",
         "include/**",
-    ],
+    ]),
 )
 
 filegroup(
