@@ -256,7 +256,7 @@ def _impl(ctx):
         flag_sets = [
             flag_set(
                 actions = ["objcopy_embed_data"],
-                flag_groups = [flag_group(flags = ["-isystem", "binary"])],
+                flag_groups = [flag_group(flags = ["-I", "binary"])],
             ),
         ],
     )
@@ -450,7 +450,7 @@ def _impl(ctx):
                             flags = [
                                 "-std=c++11",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/include/c++/9.2.1/",
+                                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/9.2.1/",
                                 "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include",
                                 "-isystem",
@@ -573,7 +573,7 @@ def _impl(ctx):
                                 "-Wl,-z,relro,-z,now",
                                 "-no-canonical-prefixes",
                                 "-pass-exit-codes",
-                                "-Wl,--build-isystemd=md5",
+                                "-Wl,--build-id=md5",
                                 "-Wl,--hash-style=gnu",
                             ],
                         ),
@@ -600,7 +600,7 @@ def _impl(ctx):
                                 "-Wl,-z,relro,-z,now",
                                 "-no-canonical-prefixes",
                                 "-pass-exit-codes",
-                                "-Wl,--build-isystemd=md5",
+                                "-Wl,--build-id=md5",
                                 "-Wl,--hash-style=gnu",
                             ],
                         ),
@@ -687,7 +687,7 @@ def _impl(ctx):
             ]
     elif (ctx.attr.cpu == "aarch64"):
         cxx_builtin_include_directories = [
-                "%{AARCH64_COMPILER_PATH}%/include/c++/9.2.1/",
+                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/9.2.1/",
                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include",
                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include-fixed",
                 "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
