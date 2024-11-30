@@ -247,8 +247,6 @@ def _impl(ctx):
                                 "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/11.3.1/include",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/sys-include",
-                                "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/11.3.1/include-fixed",
                                 "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/11.3.1/",
