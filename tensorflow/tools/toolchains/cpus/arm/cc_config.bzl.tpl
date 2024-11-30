@@ -256,7 +256,7 @@ def _impl(ctx):
         flag_sets = [
             flag_set(
                 actions = ["objcopy_embed_data"],
-                flag_groups = [flag_group(flags = ["-I", "binary"])],
+                flag_groups = [flag_group(flags = ["-isystem", "binary"])],
             ),
         ],
     )
@@ -346,17 +346,17 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "-std=c++11",
-                                "-I",
+                                "-isystem",
                                 "%{ARM_COMPILER_PATH}%/lib/gcc/arm-rpi-linux-gnueabihf/6.5.0/include",
-                                "-I",
+                                "-isystem",
                                 "%{ARM_COMPILER_PATH}%/lib/gcc/arm-rpi-linux-gnueabihf/6.5.0/include-fixed",
-                                "-I",
+                                "-isystem",
                                 "%{ARM_COMPILER_PATH}%/arm-rpi-linux-gnueabihf/include/c++/6.5.0/",
-                                "-I",
+                                "-isystem",
                                 "%{ARM_COMPILER_PATH}%/arm-rpi-linux-gnueabihf/sysroot/usr/include/",
-                                "-I",
+                                "-isystem",
                                 "%{PYTHON_INCLUDE_PATH}%",
-                                "-I",
+                                "-isystem",
                                 "/usr/include/",
                             ],
                         ),
@@ -449,17 +449,17 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "-std=c++11",
-                                "-I",
-                                "%{AARCH64_COMPILER_PATH}%/include/c++/13.2.0/",
-                                "-I",
-                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include",
-                                "-I",
-                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include-fixed",
-                                "-I",
-                                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/libc/usr/include/",
-                                "-I",
+                                "-isystem",
+                                "%{AARCH64_COMPILER_PATH}%/include/c++/9.2.1/",
+                                "-isystem",
+                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include",
+                                "-isystem",
+                                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include-fixed",
+                                "-isystem",
+                                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
+                                "-isystem",
                                 "%{PYTHON_INCLUDE_PATH}%",
-                                "-I",
+                                "-isystem",
                                 "/usr/include/",
                             ],
                         ),
@@ -573,7 +573,7 @@ def _impl(ctx):
                                 "-Wl,-z,relro,-z,now",
                                 "-no-canonical-prefixes",
                                 "-pass-exit-codes",
-                                "-Wl,--build-id=md5",
+                                "-Wl,--build-isystemd=md5",
                                 "-Wl,--hash-style=gnu",
                             ],
                         ),
@@ -600,7 +600,7 @@ def _impl(ctx):
                                 "-Wl,-z,relro,-z,now",
                                 "-no-canonical-prefixes",
                                 "-pass-exit-codes",
-                                "-Wl,--build-id=md5",
+                                "-Wl,--build-isystemd=md5",
                                 "-Wl,--hash-style=gnu",
                             ],
                         ),
@@ -687,10 +687,10 @@ def _impl(ctx):
             ]
     elif (ctx.attr.cpu == "aarch64"):
         cxx_builtin_include_directories = [
-                "%{AARCH64_COMPILER_PATH}%/include/c++/13.2.0/",
-                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include",
-                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-unknown-linux-gnu/13.2.0/include-fixed",
-                "%{AARCH64_COMPILER_PATH}%/aarch64-unknown-linux-gnu/libc/usr/include/",
+                "%{AARCH64_COMPILER_PATH}%/include/c++/9.2.1/",
+                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include",
+                "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/9.2.1/include-fixed",
+                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
                 "/usr/include",
                 "/tmp/openblas_install/include/",
             ]
@@ -751,44 +751,44 @@ def _impl(ctx):
         tool_paths = [
             tool_path(
                 name = "ar",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-ar",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-ar",
             ),
             tool_path(name = "compat-ld", path = "/bin/false"),
             tool_path(
                 name = "cpp",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-cpp",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-cpp",
             ),
             tool_path(
                 name = "dwp",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-dwp",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-dwp",
             ),
             tool_path(
                 name = "gcc",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-gcc",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-gcc",
             ),
             tool_path(
                 name = "gcov",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-gcov",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-gcov",
             ),
             tool_path(
                 name = "ld",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-ld",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-ld",
             ),
             tool_path(
                 name = "nm",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-nm",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-nm",
             ),
             tool_path(
                 name = "objcopy",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-objcopy",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-objcopy",
             ),
             tool_path(
                 name = "objdump",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-objdump",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-objdump",
             ),
             tool_path(
                 name = "strip",
-                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-unknown-linux-gnu-strip",
+                path = "%{AARCH64_COMPILER_PATH}%/bin/aarch64-none-linux-gnu-strip",
             ),
         ]
     elif (ctx.attr.cpu == "local"):
