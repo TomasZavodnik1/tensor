@@ -306,7 +306,7 @@ def _features(cpu, compiler, ctx):
                                 iterate_over = "include_paths",
                             ),
                             _iterate_flag_group(
-                                flags = ["-I", "%{system_include_paths}"],
+                                flags = ["-isystem", "%{system_include_paths}"],
                                 iterate_over = "system_include_paths",
                             ),
                             _iterate_flag_group(
