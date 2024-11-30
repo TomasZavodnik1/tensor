@@ -3,65 +3,65 @@ package(default_visibility = ["//visibility:public"])
 filegroup(
     name = "gcc",
     srcs = [
-        "aarch64-unknown-linux-gnu-gcc",
+        "bin/aarch64-none-linux-gnu-gcc",
     ],
 )
 
 filegroup(
     name = "ar",
     srcs = [
-        "aarch64-unknown-linux-gnu-ar",
+        "bin/aarch64-none-linux-gnu-ar",
     ],
 )
 
 filegroup(
     name = "ld",
     srcs = [
-        "aarch64-unknown-linux-gnu-ld",
+        "bin/aarch64-none-linux-gnu-ld",
     ],
 )
 
 filegroup(
     name = "nm",
     srcs = [
-        "aarch64-unknown-linux-gnu-nm",
+        "bin/aarch64-none-linux-gnu-nm",
     ],
 )
 
 filegroup(
     name = "objcopy",
     srcs = [
-        "aarch64-unknown-linux-gnu-objcopy",
+        "bin/aarch64-none-linux-gnu-objcopy",
     ],
 )
 
 filegroup(
     name = "objdump",
     srcs = [
-        "aarch64-unknown-linux-gnu-objdump",
+        "bin/aarch64-none-linux-gnu-objdump",
     ],
 )
 
 filegroup(
     name = "strip",
     srcs = [
-        "aarch64-unknown-linux-gnu-strip",
+        "bin/aarch64-none-linux-gnu-strip",
     ],
 )
 
 filegroup(
     name = "as",
     srcs = [
-        "aarch64-unknown-linux-gnu-as",
+        "bin/aarch64-none-linux-gnu-as",
     ],
 )
 
 filegroup(
     name = "compiler_pieces",
     srcs = glob([
-        "aarch64-unknown-linux-gnu/**",
+        "aarch64-none-linux-gnu/**",
         "libexec/**",
-        "lib/gcc/aarch64-unknown-linux-gnu/**",
+        "lib/gcc/aarch64-none-linux-gnu/**",
         "include/**",
     ]),
 )
