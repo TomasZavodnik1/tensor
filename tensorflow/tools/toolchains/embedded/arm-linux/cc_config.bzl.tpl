@@ -251,7 +251,7 @@ def _impl(ctx):
                                 "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/11.3.1/include-fixed",
                                 "-isystem",
-                                "%{AARCH64_COMPILER_PATH}%/include/c++/11.3.1",
+                                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/11.3.1/",
                                 "-isystem",
                                 "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
                                 "-isystem",
@@ -474,8 +474,7 @@ def _impl(ctx):
         cxx_builtin_include_directories = [
                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/11.3.1/include",
                 "%{AARCH64_COMPILER_PATH}%/lib/gcc/aarch64-none-linux-gnu/11.3.1/include-fixed",
-                "%{AARCH64_COMPILER_PATH}%/include/c++/11.3.1",
-                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/sys-include",
+                "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/include/c++/11.3.1/",
                 "%{AARCH64_COMPILER_PATH}%/aarch64-none-linux-gnu/libc/usr/include/",
                 "/usr/include",
             ]
