@@ -37,12 +37,12 @@ case $1 in
     fi
     ARMCC_ROOT=${TOOLCHAINS_DIR}/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf
     echo "ARMCC_FLAGS=\"-march=armv7-a -mfpu=neon-vfpv4 -funsafe-math-optimizations \
-      -I ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include \
-      -I ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed \
-      -I ${ARMCC_ROOT}/arm-linux-gnueabihf/include/c++/8.3.0 \
-      -I ${ARMCC_ROOT}/arm-linux-gnueabihf/libc/usr/include \
-      -I \"\${CROSSTOOL_PYTHON_INCLUDE_PATH}\" \
-      -I /usr/include\""
+      -isystem ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include \
+      -isystem ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed \
+      -isystem ${ARMCC_ROOT}/arm-linux-gnueabihf/include/c++/8.3.0 \
+      -isystem ${ARMCC_ROOT}/arm-linux-gnueabihf/libc/usr/include \
+      -isystem \"\${CROSSTOOL_PYTHON_INCLUDE_PATH}\" \
+      -isystem /usr/include\""
     echo "ARMCC_PREFIX=${ARMCC_ROOT}/bin/arm-linux-gnueabihf-"
 		;;
 	aarch64)
@@ -52,12 +52,12 @@ case $1 in
     fi
     ARMCC_ROOT=${TOOLCHAINS_DIR}/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu
     echo "ARMCC_FLAGS=\"-funsafe-math-optimizations \
-      -I ${ARMCC_ROOT}/lib/gcc/aarch64-linux-gnu/8.3.0/include \
-      -I ${ARMCC_ROOT}/lib/gcc/aaarch64-linux-gnu/8.3.0/include-fixed \
-      -I ${ARMCC_ROOT}/aarch64-linux-gnu/include/c++/8.3.0 \
-      -I ${ARMCC_ROOT}/aarch64-linux-gnu/libc/usr/include \
-      -I \"\${CROSSTOOL_PYTHON_INCLUDE_PATH}\" \
-      -I /usr/include\""
+      -isystem ${ARMCC_ROOT}/lib/gcc/aarch64-linux-gnu/8.3.0/include \
+      -isystem ${ARMCC_ROOT}/lib/gcc/aaarch64-linux-gnu/8.3.0/include-fixed \
+      -isystem ${ARMCC_ROOT}/aarch64-linux-gnu/include/c++/8.3.0 \
+      -isystem ${ARMCC_ROOT}/aarch64-linux-gnu/libc/usr/include \
+      -isystem \"\${CROSSTOOL_PYTHON_INCLUDE_PATH}\" \
+      -isystem /usr/include\""
     echo "ARMCC_PREFIX=${ARMCC_ROOT}/bin/aarch64-linux-gnu-"
 		;;
 	rpi0)
@@ -67,12 +67,12 @@ case $1 in
     fi
     ARMCC_ROOT=${TOOLCHAINS_DIR}/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf
     echo "ARMCC_FLAGS=\"-march=armv6 -mfpu=vfp -mfloat-abi=hard -funsafe-math-optimizations \
-      -I ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include \
-      -I ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed \
-      -I ${ARMCC_ROOT}/arm-linux-gnueabihf/include/c++/8.3.0 \
-      -I ${ARMCC_ROOT}/arm-linux-gnueabihf/libc/usr/include \
-      -I \"\${CROSSTOOL_PYTHON_INCLUDE_PATH}\" \
-      -I /usr/include\""
+      -isystem ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include \
+      -isystem ${ARMCC_ROOT}/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed \
+      -isystem ${ARMCC_ROOT}/arm-linux-gnueabihf/include/c++/8.3.0 \
+      -isystem ${ARMCC_ROOT}/arm-linux-gnueabihf/libc/usr/include \
+      -isystem \"\${CROSSTOOL_PYTHON_INCLUDE_PATH}\" \
+      -isystem /usr/include\""
     echo "ARMCC_PREFIX=${ARMCC_ROOT}/bin/arm-linux-gnueabihf-"
     ;;
 	*)
